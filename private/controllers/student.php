@@ -2,8 +2,8 @@
 
 class Student extends Controller 
 {
-    function __construct()
+    function index($id = '')
     {
-        echo "This is the students controller";
+        echo "This is the students controller ";
     }
 }

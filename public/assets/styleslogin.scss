@@ -1,0 +1,75 @@
+.logo-image{
+    max-width: 55px;
+    max-height: auto;
+}
+.navbar-logo{
+    color: #FFF;
+    font-size: 28px;
+  }
+.navbar-logo:hover {
+     color: rgb(224, 203, 6)
+  }
+div.intro-text{
+    background-color: rgba(96, 171, 221,0.6);
+    height: 200px;
+    
+}
+
+.navbar{
+    border-bottom: 3px solid white;
+}
+
+
+.navbar a:hover{
+    background-color: rgb(96, 171, 221);
+    border-bottom: 3px solid yellow;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/blue-bg.jpg);
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }
+
+div.sign-up-form
+{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 5cm;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    background-color: rgb(138, 176, 219);
+    padding: 20px;
+
+}
+
+.sign-up-form h1{
+    color: rgb(3, 12, 19);
+    padding-bottom: 30px;
+}
+
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+
+}
+
+button{
+    color: royalblue;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
