@@ -8,7 +8,7 @@ class Home extends Controller{
         }
 
         
-        $user = new User();
+        $user = new Users();
         echo $this->view('home');
 
         // $user->insert($data);

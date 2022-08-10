@@ -22,10 +22,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <?php if (isset($_SESSION['USER'])):?>
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#courses" class="nav-link">Courses</a>
+                        <a href="course" class="nav-link">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a href="#instructors" class="nav-link">Instructors</a>
@@ -37,7 +39,7 @@
                             ?>
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <?php if($_SESSION['USER']['rank'] == "super" || $_SESSION['USER']['rank'] == "admin"): ?>
+                            <?php if ( $_SESSION['USER']['rank'] == "super" || $_SESSION['USER']['rank'] == "admin"): ?>
                                 <li><a class="dropdown-item" href="<?=ROOT?>/signup">Add user</a></li>
                             <?php endif; ?>
                             <li><a class="dropdown-item" href="<?=ROOT?>/profile">Profile</a></li>
@@ -46,6 +48,7 @@
                     </li>
                 </ul>
             </div>
+            <?php endif; ?>
         </div>
     </nav>
 </body>

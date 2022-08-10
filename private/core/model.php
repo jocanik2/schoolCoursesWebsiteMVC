@@ -7,7 +7,7 @@ class Model extends Database
     public function __construct()
     {
         if (property_exists($this,"table")) {
-            $this->table = strtolower(get_class($this))."s";
+            $this->table = strtolower(get_class($this));
            
         }
 
@@ -18,7 +18,7 @@ class Model extends Database
     {
                 $conn = $this->connect();
                 
-                $data = $conn->query("SELECT * FROM $this->table") -> fetch_all(MYSQLI_ASSOC);
+                $data = $conn-> query("SELECT * FROM $this->table") -> fetch_all(MYSQLI_ASSOC);
                 if ($data) {
                     $conn->close();
                     return $data;

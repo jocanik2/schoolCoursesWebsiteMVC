@@ -9,7 +9,7 @@ class Login extends Controller
 
         if (count($_POST) > 0) {
 
-            $user = new User();
+            $user = new Users();
             if ($row = $user->find($_POST['email_login'])) {
                 if (password_verify($_POST['pwd_login'], $row['password'])) {
                     Auth::authenticate($row);

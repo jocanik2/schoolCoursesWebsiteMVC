@@ -7,7 +7,7 @@ class Signup extends Controller
         $errors = array();
 
         if (count($_POST)>0) {
-            $user = new User();
+            $user = new Users();
 
             if ($user->validate($_POST)) {
                 $arr['firstname'] = $_POST['firstname'];
