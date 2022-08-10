@@ -7,29 +7,29 @@ class Database
     private $password;
     private $dbname;
 
-    protected function connect(){
+    protected function connect()
+    {
 
         $this->servername = "localhost";
         $this->username = "root";
         $this->password = "";
         $this->dbname = "school_db";
 
-        $conn = new mysqli($this->servername, $this->username, 
-        $this->password, $this->dbname);
+        $conn = new mysqli(
+            $this->servername,
+            $this->username,
+            $this->password,
+            $this->dbname
+        );
 
-       if(!$conn){
-        die("Could not connect to db.");
-       }else{
-        return $conn;
-       }
-
+        if (!$conn) {
+            die("Could not connect to db." + mysqli_connect_error());
+        } else {
+            return $conn;
+        }
     }
 
-    protected function run(){
+    
 
-    }
-
-    public function query(){
-
-    }
+    
 }

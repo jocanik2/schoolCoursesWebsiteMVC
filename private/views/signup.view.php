@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,31 +15,42 @@
     <?php
     include('includes/header.view.php');
     ?>
+
     <section>
         <div class="sign-up-form">
-            <form action="includes/signup.view.php" method="POST">
+            <form method="POST">
                 <h1 class="login-heading">SIGN UP</h1>
+
+            <?php if(count($errors) >0):?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> 
+                    <?php foreach($errors as $error):?>
+                        <br> <?=$error; ?>
+                    <?php endforeach; ?>
+
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php endif; ?>
+
                 <input type="firstname" name="firstname" class="input-box" placeholder="First name">
                 <input type="lastname" name="lastname" class="input-box" placeholder="Last name">
+                <input type="username" name="username" class="input-box" placeholder="Username">
                 <input type="email" name="email" class="input-box" placeholder="Email">
-                <select class="input-box">
-                    <option>--Select a Gender--</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                </select>
-                <select class="input-box">
+
+                <select class="input-box" name="rank">
                     <option>--Select a Rank--</option>
                     <option value="student">student</option>
                     <option value="reception">reception</option>
                     <option value="lecturer">lecturer</option>
                     <option value="admin">admin</option>
-                    <option value="super">super</option>
                 </select>
 
-                <input type="password" name="text" class="input-box" placeholder="Password">
-                <input type="passwordRetype" name="text" class="input-box" placeholder="Retype password">
+                <input type="text" name="pwd" class="input-box" placeholder="Password">
+                <input type="text" name="pwdrepeat" class="input-box" placeholder="Retype password">
 
-                <button type="submit" name="submit-login">ADD USER</button>
+                <button type="submit" name="submit-signup">ADD USER</button>
 
                 <hr>
 

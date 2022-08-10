@@ -19,23 +19,28 @@
                 <img src="<?= ASSETS ?>/user-image.jpg" class="border border-primary d-block mx-auto rounded-circle " style="width:150px;">
                 <h3 class="text-center">Jovana Nikolic</h3>
             </div>
-            <div class="col-sm-11 col-md-9 bg-light p-2">
+            <div class="col-sm-20 col-md-20 bg-light p-2">
                 <table class="table table-hover table-striped table-bordered">
                     <tr>
                         <th>First Name:</th>
-                        <td>Mary</td>
+                        <td><?php echo $_SESSION['USER']['first_name']?></td>
                     </tr>
                     <tr>
                         <th>Last Name:</th>
-                        <td>Phiri</td>
+                        <td><?php echo $_SESSION['USER']['last_name']?></td>
                     </tr>
                     <tr>
-                        <th>Gender:</th>
-                        <td>Female</td>
+                        <th>Username:</th>
+                        <td><?php echo $_SESSION['USER']['username']?></td>
+                    </tr>
+
+                    <tr>
+                        <th>E-mail:</th>
+                        <td><?php echo $_SESSION['USER']['email']?></td>
                     </tr>
                     <tr>
-                        <th>Date Created:</th>
-                        <td>2021-08-02</td>
+                        <th>Rank</th>
+                        <td><?php echo $_SESSION['USER']['rank']?></td>
                     </tr>
 
                 </table>
@@ -48,10 +53,10 @@
                     <a class="nav-link active" href="#">Basic Info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Classes</a>
+                    <a class="nav-link" href="#">Courses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tests</a>
+                    <a class="nav-link" href="#">Quizes</a>
                 </li>
 
             </ul>

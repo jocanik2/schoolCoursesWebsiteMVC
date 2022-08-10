@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,11 +32,16 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            User
+                            <?php 
+                            echo Auth::get_Name();
+                            ?>
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a class="dropdown-item" href="#profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="#logout">Logout</a></li>
+                            <?php if($_SESSION['USER']['rank'] == "super" || $_SESSION['USER']['rank'] == "admin"): ?>
+                                <li><a class="dropdown-item" href="<?=ROOT?>/signup">Add user</a></li>
+                            <?php endif; ?>
+                            <li><a class="dropdown-item" href="<?=ROOT?>/profile">Profile</a></li>
+                            <li><a class="dropdown-item" href=" <?=ROOT?>/logout">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

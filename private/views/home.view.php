@@ -12,6 +12,7 @@
 
 <?php
     include('includes/header.view.php');
+
 ?>
 <!-- Intro section -->
 <section class="intro-section bg-dark text-light p-5 text-center text-sm-start">
@@ -50,7 +51,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card-body bg-light text-center">
                  <img class="rounded-circle mb-3" src="https://randomuser.me/api/portraits/men/18.jpg" alt="">
-                 <h3 class="card-title mb-3">Andrew Drummond</h3>
+                 <h3 class="card-title mb-3">Andrew Mick</h3>
                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem, distinctio impedit mollitia sapiente dicta sunt nulla deserunt commodi quasi officiis delectus neque aut. Nam odio perferendis illum labore at!</p>
                 
                 </div>
