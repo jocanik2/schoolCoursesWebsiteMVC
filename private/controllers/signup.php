@@ -17,7 +17,7 @@ class Signup extends Controller
                 $arr['rank'] = $_POST['rank'];
                 $arr['password'] = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
 
-                $user->insert($arr);
+                $user->add($arr);
                 $this->redirect('home');
             }else{
                 //errors

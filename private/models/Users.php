@@ -30,7 +30,7 @@ class Users extends Model
 
 
 
-    public function insert($array){
+    public function add($array){
 
         $conn = $this->connect();
         $sql = "INSERT INTO USERS(first_name, last_name, username, email, rank, password) VALUES (?,?,?,?,?,?);";
@@ -73,6 +73,25 @@ class Users extends Model
         }
 
         mysqli_stmt_close($stmt);
+
+    }
+
+    public function delete($id){
+
+        $conn = $this->connect();
+        $sql = "delete from $this->table where course_id = ?";
+        $stmt = mysqli_stmt_init($conn);
+
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            $this->errors[] = "Statement preparing failed.";
+            exit();
+        }
+        
+        mysqli_stmt_bind_param($stmt, 'i', $id);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+
+        
 
     }
     

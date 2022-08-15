@@ -7,7 +7,7 @@
     font-size: 28px;
   }
 .navbar-logo:hover {
-     color: rgb(224, 203, 6)
+     color: rgb(208, 194, 41)
   }
 div.intro-text{
     background-color: rgba(96, 171, 221,0.6);
@@ -23,7 +23,7 @@ div.intro-text{
 
 .navbar a:hover{
     background-color: rgb(96, 171, 221);
-    border-bottom: 3px solid yellow;
+    border-bottom: 3px solid rgb(237, 240, 241);
 }
 body{
     margin: 0;
@@ -58,6 +58,15 @@ div.sign-up-form
     outline: none;
 
 }
+.text-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+
+}
 
 button{
     color: royalblue;
@@ -71,4 +80,5 @@ button{
     margin-top: 30px;
 
 }
+
 

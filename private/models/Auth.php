@@ -33,4 +33,11 @@ class Auth
         return "User";
        }
     }
+
+    public static function isAdmin(){
+       if( $_SESSION['USER']['rank'] == 'super' || $_SESSION['USER']['rank'] == 'admin'){
+        return true;
+       }
+        return false;
+    }
 }

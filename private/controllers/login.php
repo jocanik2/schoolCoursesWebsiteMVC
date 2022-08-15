@@ -24,5 +24,16 @@ class Login extends Controller
         $this->view('login', [
             'errors' => $errors,
         ]);
+
+    }
+
+    function delete(){
+        if ($_SESSION['USER']['rank'] == 'super' || $_SESSION['USER']['rank'] == 'admin') {
+            $user = new Users();
+
+        }else{
+
+            
+        }
     }
 }

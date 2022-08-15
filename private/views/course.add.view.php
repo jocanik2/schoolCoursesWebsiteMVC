@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleslogin.scss">
     <title>Sign up</title>
 </head>
 
 <body>
     <!-- Navbar -->
     <?php
-    include('includes/header.view.php');
+    require "includes/header.view.php";
     ?>
     <section>
         <div class="sign-up-form">
             <form method="POST">
-                <h1 class="login-heading">LOG IN</h1>
+                <h1 class="ass-course-heading">Add a new course</h1>
                 <?php if (count($errors) > 0) : ?>
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                         <strong>Oh no!</strong>
@@ -29,16 +30,17 @@
                         </button>
                     </div>
                 <?php endif; ?>
-                <input type="email" name="email_login" class="input-box" placeholder="Email">
-                <br>
-                <input type="password" name="pwd_login" class="input-box" placeholder="Password">
+                <input type="name" name="name" class="input-box" placeholder="Name">
+                <input type="description" name="description" class="input-box" placeholder="Description">
+                <input type="technology" name="technology" class="input-box" placeholder="Technology">
+                <input type="semester" name="semester" class="input-box" placeholder="Semester">
+                <input type="price" name="price" class="input-box" placeholder="Price">
 
-                <button type="submit" name="submit-login">LOGIN</button>
+                
+                <button type="submit" name="submit-add-course">ADD</button>
 
                 <hr>
 
-                        
-                
             </form> 
            
         </div>

@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include('includes/header.view.php');
+?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= ROOT ?>/assets/styleslogin.css">
     <title>Courses</title>
+
 </head>
 
 <body>
-    <?php
-    include('includes/header.view.php');
-    ?>
 
-    <div class="col-sm-20 col-md-20 bg-light p-2" >
 
-        <table class="table table-striped table-hover table-light table-bordered" >
-
+    <div class="table-courses bg-light p-2 w-75 mx-auto mt-4">
+        <table class="table table-striped table-hover table-light table-bordered align-middle">
             <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Technology</th>
-                <th>Semester</th>
-                <th>
-                    <a href="">
-                        <button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add New</button>
-                    </a>
-                </th>
+                <th class="text-center">ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Technology</th>
+                <th class="text-center">Semester</th>
+                <th class="text-center">Price</th>
+
+                <?php if (Auth::isAdmin()) : ?>
+                    <th>
+                        <a href="<?= ROOT ?>/course/add">
+                            <button class="btn btn-sm btn-primary ">Add New</button>
+                        </a>
+                    </th>
+                <?php endif; ?>
             </tr>
             <?php if ($rows) : ?>
-
+                <?php $num = 0; ?>
                 <?php foreach ($rows as $row) : ?>
 
                     <tr>
-                        <td class = "cell"><?= $row['name'] ?></td>
-                        <td class="cell"><?= $row['description']?></td>
-                        <td class="cell"><?= $row['technology'] ?></td>
-                        <td class="cell"><?= $row['semester'] ?></td>
-
-                        <td>
-                            <a href="#edit>">
-                                <button class="btn-sm btn btn-info text-white "></button>
-                            </a>
-
-                            <a href="#delete">
-                                <button class="btn-sm btn btn-danger"></button>
-                            </a>
-
-                          
+                        <?php if (Auth::isAdmin()) : ?>
+                            <td class="cell" name="num"><?= ($num = $num + 1) ?></td>
+                        <?php endif; ?>
+                        <td class="text-center"><?= $row['name'] ?></td>
+                        <td class="text-center"><?= $row['description'] ?></td>
+                        <td class="text-center"><?= $row['technology'] ?></td>
+                        <td class="text-center"><?= $row['semester'] ?></td>
+                        <td class="text-center"><?= $row['price'] . "$"; ?></td>
 
 
-                        </td>
+                        <?php if (Auth::isAdmin()) : ?>
+                            <td>
+                                <a href="<?= ROOT ?>/course/edit/<?= $row['course_id'] ?>">
+                                    <button class="btn pull-left bg-info btn-sm rounded-pill">Edit price</button>
+                                </a>
+                                <a href="<?= ROOT ?>/course/delete/<?= $row['course_id'] ?>">
+                                    <button class="btn pull-left bg-danger mt-1 btn-sm rounded-pill" type="button">Delete</button>
+                                </a>
 
+                            </td>
+                        <?php endif; ?>
                     </tr>
 
                 <?php endforeach; ?>
@@ -65,7 +71,6 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

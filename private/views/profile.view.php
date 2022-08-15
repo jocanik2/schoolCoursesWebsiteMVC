@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Profile</title>
 </head>
 
@@ -16,7 +15,7 @@
     <div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
         <div class="row">
             <div>
-                <img src="<?= ASSETS ?>/user-image.jpg" class="border border-primary d-block mx-auto rounded-circle " style="width:150px;">
+                <img src="<?= IMAGES ?>/user-image.jpg" class="border border-primary d-block mx-auto rounded-circle " style="width:150px;">
                 <h3 class="text-center">Jovana Nikolic</h3>
             </div>
             <div class="col-sm-20 col-md-20 bg-light p-2">
@@ -74,7 +73,6 @@
 
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 
