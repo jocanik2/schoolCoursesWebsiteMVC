@@ -79,7 +79,7 @@ class Users extends Model
     public function delete($id){
 
         $conn = $this->connect();
-        $sql = "delete from $this->table where course_id = ?";
+        $sql = "delete from users where id = ?";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -91,8 +91,7 @@ class Users extends Model
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
-        
-
+    
     }
     
 }

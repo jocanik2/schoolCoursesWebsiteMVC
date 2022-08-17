@@ -1,9 +1,3 @@
-<?php
-$commentNewCount = $_POST['commentNewCount'];
-$comment = new Comments();
-$rows = $comment->get_limited($commentNewCount);
-print_r($rows);
-?>
 
 <?php foreach ($rows as $row): ?>
     <div class="col-md-6 col-lg-3">

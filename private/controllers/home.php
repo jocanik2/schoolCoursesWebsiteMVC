@@ -9,10 +9,6 @@ class Home extends Controller{
         $user = new Users();
         echo $this->view('home');
 
-        // $user->insert($data);
-        // $user->update($id, $data);
-        // $user->delete($id);
-
 
 
     }   

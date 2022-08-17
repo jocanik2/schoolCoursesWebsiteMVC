@@ -1,6 +1,5 @@
 <?php
 include('includes/header.view.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +11,11 @@ include('includes/header.view.php');
     <title>Welcome!</title>
     <script>
         $(document).ready(function() {
+            console.log("document");
             var commentCount = 1;
-            $("#btn").click(function() {
+            $("#btn_comments").click(function() {
                 commentCount = commentCount + 1;
-                $("#comm").load("load-comments.php", {
+                $("#comm").load("<?=ROOT?>/comment", {
                     commentNewCount: commentCount
                 });
             })
@@ -78,7 +78,11 @@ include('includes/header.view.php');
 
             </div>
         </div>
-        <button id="btn" type="submit">Show more comments</button>
+        <div class="text-center">
+
+        <button id="btn_comments" class="col-4">Load more</button>
+
+        </div>
     </section>
     <?php
     include("includes/footer.view.php");

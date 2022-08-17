@@ -33,7 +33,7 @@ include('includes/header.view.php');
                 <?php foreach ($rows as $row) : ?>
 
                     <tr id="delete<?php echo $row['id'] ?>">
-                        <td class="cell"><?= ($num = $num+1) ?></td>
+                        <td class="cell"><?= ($num = $num + 1) ?></td>
                         <td class="cell"><?= $row['first_name'] ?></td>
                         <td class="cell"><?= $row['last_name'] ?></td>
                         <td class="cell"><?= $row['username'] ?></td>
@@ -62,24 +62,23 @@ include('includes/header.view.php');
     </div>
 
     <script type="text/javascript">
+        function deleteAjax(id) {
+            if (confirm('Are you sure?')) {
+                $.ajax({
 
-                function deleteAjax(id){
-                    if (confirm('Are you sure?')) {
-                        
+                    type: 'POST',
+                    url: "<?=ROOT?>/user/delete",
+                    data: {
+                        delete_id: id
+                    },
+                    success:
+                        function(data) {
+                            $("#delete" + id).hide('slow');
+                        }
 
-                        $.ajax({
-
-                            type:'POST',
-                            url:"user.delete.view.php",
-                            data:{delete_id:id},
-                            success:function(data){
-                                $("#delete"+id).hide('slow');
-                            }
-
-                        })
-                    }
-                }
-
+                })
+            }
+        }
     </script>
 
 </body>

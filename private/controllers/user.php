@@ -17,5 +17,11 @@ class User extends Controller
             $this->view('user', ['rows' => $data]);
         }
     }
+
+    public function delete(){
+        $user = new Users();
+        $id = $_POST['delete_id'];
+        $user->delete($id);
+    }
 }
 ?>

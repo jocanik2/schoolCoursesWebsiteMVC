@@ -8,7 +8,7 @@ class Comments extends Model{
 
         $conn = $this->connect();
                 
-        $data = $conn-> query("SELECT * FROM $this->table LIMIT $limit;") -> fetch_all(MYSQLI_ASSOC);
+        $data = $conn-> query("SELECT * FROM comments LIMIT $limit;") -> fetch_all(MYSQLI_ASSOC);
         if ($data) {
             $conn->close();
             return $data;
