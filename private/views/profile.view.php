@@ -10,7 +10,7 @@
     <title>Profile</title>
 </head>
 
-<body>
+<body style="background-image: url('<?=ROOT?>/asset/images/blue-bg.jpg');">
 
     <div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
         <div class="row">

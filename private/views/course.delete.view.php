@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-image: url('<?=ROOT?>/asset/images/blue-bg.jpg');">
     <?php
     include('includes/header.view.php');
     ?>

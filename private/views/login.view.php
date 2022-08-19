@@ -8,7 +8,7 @@
     <title>Sign up</title>
 </head>
 
-<body>
+<body style="background-image: url('<?=ROOT?>/asset/images/blue-bg.jpg');">
     <!-- Navbar -->
     <?php
     include('includes/header.view.php');

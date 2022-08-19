@@ -13,7 +13,7 @@ include('includes/header.view.php');
 
 </head>
 
-<body>
+<body style="background-image: url('<?=ROOT?>/asset/images/blue-bg.jpg');">
 
 
     <div class="table-courses bg-light p-2 w-75 mx-auto mt-4">

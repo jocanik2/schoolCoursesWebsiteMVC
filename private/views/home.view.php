@@ -24,7 +24,7 @@ include('includes/header.view.php');
 </head>
 
 
-<body>
+<body style="background-image: url('<?=ROOT?>/asset/images/blue-bg.jpg');">
 
     <!-- Intro section -->
     <section class="intro-section bg-dark text-light p-5 text-center text-sm-start">
@@ -33,7 +33,7 @@ include('includes/header.view.php');
                 <div class="intro-text bg-intro text-dark p-4">
                     <h1>Let's start an <span class="text-light">IT career </span>together</h1>
                 </div>
-                <img class="img-fluid w-50 p-2 d-sm-blocked" src="images/selflearning.jpg" alt="">
+                <img class="img-fluid w-50 p-2 d-sm-blocked" src="<?=ROOT;?>/asset/images/selflearning.jpg" alt="">
             </div>
 
         </div>
@@ -41,7 +41,7 @@ include('includes/header.view.php');
     <!-- Section students -->
     <section class="students p-4">
 
-        <div class="container">
+        <div class="container" style="background: color url(<?=ROOT?>/asset/images/blue-bg.jpg)">
             <h2 class="text-dark text-center pb-4">What do our students say?</h2>
             <div id="comm" class="row g-4">
                 <?php
