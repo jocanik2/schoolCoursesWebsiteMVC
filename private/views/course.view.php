@@ -39,9 +39,8 @@ include('includes/header.view.php');
                 <?php foreach ($rows as $row) : ?>
 
                     <tr>
-                        <?php if (Auth::isAdmin()) : ?>
-                            <td class="cell" name="num"><?= ($num = $num + 1) ?></td>
-                        <?php endif; ?>
+                      
+                        <td class="cell" name="num"><?= ($num = $num + 1) ?></td>
                         <td class="text-center"><?= $row['name'] ?></td>
                         <td class="text-center"><?= $row['description'] ?></td>
                         <td class="text-center"><?= $row['technology'] ?></td>
