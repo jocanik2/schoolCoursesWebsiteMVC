@@ -39,15 +39,15 @@
                 <input type="email" name="email" class="input-box" placeholder="Email">
 
                 <select class="input-box" name="rank">
-                    <option>--Select a Rank--</option>
+                    <option>-Choose a rank-</option>
                     <option value="student">student</option>
-                    <option value="reception">reception</option>
+                    <option value="receptionist">receptionist</option>  
                     <option value="lecturer">lecturer</option>
                     <option value="admin">admin</option>
                 </select>
 
-                <input type="text" name="pwd" class="input-box" placeholder="Password">
-                <input type="text" name="pwdrepeat" class="input-box" placeholder="Retype password">
+                <input type="password" name="pwd" class="input-box" placeholder="Password">
+                <input type="password" name="pwdrepeat" class="input-box" placeholder="Retype password">
 
                 <button type="submit" name="submit-signup">ADD USER</button>
 
